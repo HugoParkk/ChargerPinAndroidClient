@@ -7,16 +7,16 @@ import android.widget.Button
 import xyx.pokoed.chargerpinandroidclient.auth.LoginActivity
 
 class MainActivity : AppCompatActivity() {
-    lateinit var loginBtn: Button;
+    lateinit var toLoginBtn: Button;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loginBtn = findViewById(R.id.btn_login)
+        toLoginBtn = findViewById(R.id.btn_to_login)
 
 
-        loginBtn.setOnClickListener {
-            val loginIntent: Intent = Intent(this, LoginActivity::class.java)
+        toLoginBtn.setOnClickListener {
+            val loginIntent = Intent(this, LoginActivity::class.java)
             startActivity(loginIntent)
         }
 
