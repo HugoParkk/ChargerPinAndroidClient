@@ -40,10 +40,45 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="유저이름"></TextView>
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="비밀번호"></TextView>
 
     <EditText
         android:id="@+id/input_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password" />
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 재입력"></TextView>
+
+    <EditText
+        android:id="@+id/input_pwd_re"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password" />
@@ -55,6 +90,7 @@
       android:layout_height="wrap_content"
       android:text="회원가입" />
   <TextView
+      android:id="@+id/to_login"
       android:layout_gravity="right"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
