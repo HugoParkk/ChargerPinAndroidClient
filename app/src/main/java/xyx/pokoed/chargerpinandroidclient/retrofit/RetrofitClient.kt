@@ -6,7 +6,7 @@ import retrofit2.create
 
 object RetrofitClient {
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://api.github.com/")
+        .baseUrl("http://pokoed.xyz:8081/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
