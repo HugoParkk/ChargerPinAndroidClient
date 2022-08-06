@@ -8,17 +8,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import xyx.pokoed.chargerpinandroidclient.R
-import xyx.pokoed.chargerpinandroidclient.auth.data.AuthRequest
-import xyx.pokoed.chargerpinandroidclient.auth.data.AuthResponse
+import xyx.pokoed.chargerpinandroidclient.auth.data.LoginRequest
+import xyx.pokoed.chargerpinandroidclient.auth.data.LoginResponse
 import xyx.pokoed.chargerpinandroidclient.retrofit.RetrofitClient
-import xyx.pokoed.chargerpinandroidclient.retrofit.RetrofitService
 
 class LoginActivity : AppCompatActivity() {
     lateinit var inputId: EditText
@@ -39,12 +35,12 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             val id = inputId.text.toString()
             val pwd = inputPwd.text.toString()
-            val callLogin = RetrofitClient.api.login(AuthRequest(id, pwd))
+            val callLogin = RetrofitClient.api.login(LoginRequest(id, pwd))
 
-            callLogin.enqueue(object : Callback<AuthResponse> {
+            callLogin.enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(
-                    call: Call<AuthResponse>,
-                    response: Response<AuthResponse>
+                    call: Call<LoginResponse>,
+                    response: Response<LoginResponse>
                 ) {
                     if (response.isSuccessful()) {
                         Toast.makeText(applicationContext, "${response.body()?.msg} 입니다", Toast.LENGTH_SHORT).show()
@@ -53,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }
 
-                override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
+                override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                     Toast.makeText(applicationContext, "${t.message}", Toast.LENGTH_SHORT).show()
                     Log.d("asdf", t.message.toString())
                 }
