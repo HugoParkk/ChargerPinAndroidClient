@@ -28,6 +28,7 @@
         android:id="@+id/input_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="text"
         android:hint="ID" />
 
   </LinearLayout>
@@ -46,6 +47,7 @@
         android:id="@+id/input_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="text"
         android:hint="Username" />
 
   </LinearLayout>
@@ -64,6 +66,7 @@
         android:id="@+id/input_pwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:hint="Password" />
 
   </LinearLayout>
@@ -81,11 +84,13 @@
         android:id="@+id/input_pwd_re"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:hint="Password" />
 
   </LinearLayout>
 
   <Button
+      android:id="@+id/btn_register"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="회원가입" />
