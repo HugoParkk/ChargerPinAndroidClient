@@ -58,6 +58,7 @@ class RegisterActivity : AppCompatActivity() {
                 ) {
                     if (response.isSuccessful()) {
                         Toast.makeText(applicationContext, "${response.body()?.msg} 입니다", Toast.LENGTH_SHORT).show()
+                        sendLoginActivity()
                     } else {
                         Toast.makeText(applicationContext, "실패 400", Toast.LENGTH_SHORT).show()
                     }
@@ -72,8 +73,12 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         toLogin.setOnClickListener {
-            val loginIntent = Intent(this, LoginActivity::class.java)
-            startActivity(loginIntent)
+            sendLoginActivity()
         }
+    }
+
+    fun sendLoginActivity() {
+        val loginIntent = Intent(this, LoginActivity::class.java)
+        startActivity(loginIntent)
     }
 }

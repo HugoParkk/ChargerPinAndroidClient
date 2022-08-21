@@ -11,6 +11,7 @@ import android.widget.Toast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import xyx.pokoed.chargerpinandroidclient.App
 import xyx.pokoed.chargerpinandroidclient.R
 import xyx.pokoed.chargerpinandroidclient.auth.data.LoginRequest
 import xyx.pokoed.chargerpinandroidclient.auth.data.LoginResponse
@@ -44,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
                 ) {
                     if (response.isSuccessful()) {
                         Toast.makeText(applicationContext, "${response.body()?.msg} 입니다", Toast.LENGTH_SHORT).show()
+                        App.instance.saveUserInfoData()
                     } else {
                         Toast.makeText(applicationContext, "실패 400", Toast.LENGTH_SHORT).show()
                     }
