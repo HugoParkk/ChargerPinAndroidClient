@@ -1,6 +1,6 @@
 package xyx.pokoed.chargerpinandroidclient.auth.data
 
-data class UserInfo (
+data class UserInfoDTO (
     val userId: String,
-    val userPassword: String,
+    val userName: String,
 )
