@@ -11,13 +11,14 @@
     <ImageView
         android:layout_gravity="center_horizontal"
         android:layout_width="280dp"
-        android:layout_height="280dp"
+        android:layout_height="180dp"
         android:src="@drawable/charger_pin_logo"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="12dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,6 +29,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
+            android:background="@drawable/box_border"
+            android:padding="8dp"
             android:hint="ID" />
 
     </LinearLayout>
@@ -46,6 +49,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:background="@drawable/box_border"
+            android:padding="8dp"
             android:hint="Password" />
         <CheckBox
             android:id="@+id/checkAutoLogin"
@@ -54,16 +59,18 @@
             android:text="자동 로그인"/>
     </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/box_border"
         android:text="로그인" />
     <TextView
         android:id="@+id/to_register"
         android:layout_gravity="right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
         android:text="계정이 없나요?"/>
 
 </LinearLayout>
