@@ -1,16 +1,17 @@
 package xyx.pokoed.chargerpinandroidclient
 
 import android.app.Application
-import android.content.Context
 
 class App: Application() {
 
-    fun saveUserInfoData(userInfo: String) {
+    fun saveUserInfoData(id: String, pwd: String) {
         val pref = getSharedPreferences("userInfo", MODE_PRIVATE)
         val edit = pref.edit()
-        edit.putString("info", userInfo)
+        edit.putString("userId", id)
+        edit.putString("userPassword", pwd)
         edit.apply()
     }
+
 
     init {
         instance = this
@@ -18,6 +19,8 @@ class App: Application() {
 
     override fun onCreate() {
         super.onCreate()
+
+        lateinit var userName: String
     }
 
     companion object {
