@@ -44,8 +44,8 @@ class LoginActivity : AppCompatActivity() {
                     response: Response<LoginResponse>
                 ) {
                     if (response.isSuccessful()) {
-                        Toast.makeText(applicationContext, "${response.body()?.msg} 입니다", Toast.LENGTH_SHORT).show()
-                        App.instance.saveUserInfoData()
+                        Toast.makeText(applicationContext, "${response.body()!!.user!!.userName} 입니다", Toast.LENGTH_SHORT).show()
+                        App.instance.saveUserInfoData(id, pwd)
                     } else {
                         Toast.makeText(applicationContext, "실패 400", Toast.LENGTH_SHORT).show()
                     }
