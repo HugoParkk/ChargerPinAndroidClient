@@ -23,7 +23,7 @@ data class Body(
 )
 
 data class Items(
-    val item: List<ChargerInfo>
+    val item: Array<ChargerInfo>
 )
 
 data class ChargerInfo(
