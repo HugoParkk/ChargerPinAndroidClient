@@ -26,11 +26,13 @@
             android:inputType="text"
             android:background="@drawable/box_border"
             android:padding="8dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginRight="16dp"
-            android:hint="Search" />
+            android:hint="Search"
+            android:imeOptions="actionGo" />
 
         <ImageView
+            android:id="@+id/search_btn"
             android:layout_gravity="center_vertical"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -38,10 +40,9 @@
 
     </LinearLayout>
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/charger_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </ListView>
+        android:layout_height="match_parent" />
 
 </LinearLayout>
