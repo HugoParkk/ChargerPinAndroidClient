@@ -45,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
                 ) {
                     if (response.isSuccessful()) {
                         Toast.makeText(applicationContext, "${response.body()!!.user!!.userName} 입니다", Toast.LENGTH_SHORT).show()
+                        // id pwd 자동 로그인 때문에 저장
                         App.instance.saveUserInfoData(id, pwd)
                     } else {
                         Toast.makeText(applicationContext, "실패 400", Toast.LENGTH_SHORT).show()

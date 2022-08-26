@@ -31,7 +31,8 @@
             android:inputType="text"
             android:background="@drawable/box_border"
             android:padding="8dp"
-            android:hint="ID" />
+            android:hint="ID"
+            android:imeOptions="actionNext"/>
 
     </LinearLayout>
 
@@ -51,7 +52,8 @@
             android:inputType="textPassword"
             android:background="@drawable/box_border"
             android:padding="8dp"
-            android:hint="Password" />
+            android:hint="Password"
+            android:imeOptions="actionGo"/>
         <CheckBox
             android:id="@+id/checkAutoLogin"
             android:layout_width="match_parent"

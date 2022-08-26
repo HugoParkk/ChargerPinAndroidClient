@@ -32,7 +32,8 @@
         android:inputType="text"
         android:background="@drawable/box_border"
         android:padding="8dp"
-        android:hint="ID" />
+        android:hint="ID"
+        android:imeOptions="actionNext"/>
 
   </LinearLayout>
 
@@ -54,7 +55,8 @@
         android:inputType="text"
         android:background="@drawable/box_border"
         android:padding="8dp"
-        android:hint="Username" />
+        android:hint="Username"
+        android:imeOptions="actionNext"/>
 
   </LinearLayout>
 
@@ -76,7 +78,8 @@
         android:inputType="textPassword"
         android:background="@drawable/box_border"
         android:padding="8dp"
-        android:hint="Password" />
+        android:hint="Password"
+        android:imeOptions="actionNext"/>
 
   </LinearLayout>
   <LinearLayout
@@ -97,7 +100,8 @@
         android:inputType="textPassword"
         android:background="@drawable/box_border"
         android:padding="8dp"
-        android:hint="Password" />
+        android:hint="Password"
+        android:imeOptions="actionGo"/>
 
   </LinearLayout>
 
