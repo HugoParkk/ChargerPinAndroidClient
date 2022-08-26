@@ -6,6 +6,8 @@ import xyx.pokoed.chargerpinandroidclient.auth.data.LoginRequest
 import xyx.pokoed.chargerpinandroidclient.auth.data.LoginResponse
 import xyx.pokoed.chargerpinandroidclient.auth.data.RegisterRequest
 import xyx.pokoed.chargerpinandroidclient.auth.data.RegisterResponse
+import xyx.pokoed.chargerpinandroidclient.chagerList.data.ChargerInfoDTO
+import xyx.pokoed.chargerpinandroidclient.chagerList.data.ChargerRequest
 
 interface RetrofitService {
     @POST("auth/login")
@@ -13,4 +15,7 @@ interface RetrofitService {
 
     @POST("auth/join")
     fun join(@Body user: RegisterRequest): Call<RegisterResponse>
+
+    @POST("charger/info")
+    fun search(@Body keyword: ChargerRequest): Call<ChargerInfoDTO>
 }
