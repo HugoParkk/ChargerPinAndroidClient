@@ -7,7 +7,6 @@ data class ChargerInfoDTO(
 data class Response(
     val header: Header,
     val body: Body,
-
 )
 
 data class Header(
@@ -23,7 +22,27 @@ data class Body(
 )
 
 data class Items(
-    val item: Array<ChargerInfo>
+    val item: Array<ChargerInfo>,
+)
+
+data class ChargerInfoDTO1(
+    val response: Response1,
+)
+
+data class Response1(
+    val header: Header,
+    val body: Body1,
+)
+
+data class Body1(
+    val items: Items1,
+    val numOfRows: Int,
+    val pageNo: Int,
+    val totalCount: Int
+)
+
+data class Items1(
+    val item: ChargerInfo
 )
 
 data class ChargerInfo(
