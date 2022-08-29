@@ -1,6 +1,9 @@
 package xyx.pokoed.chargerpinandroidclient
 
 import android.app.Application
+import android.content.Intent
+import xyx.pokoed.chargerpinandroidclient.auth.LoginActivity
+import xyx.pokoed.chargerpinandroidclient.chagerList.data.BookmarkDTO
 
 class App: Application() {
 
@@ -20,11 +23,13 @@ class App: Application() {
     override fun onCreate() {
         super.onCreate()
 
-        lateinit var userName: String
     }
 
     companion object {
         lateinit var instance: App
+        lateinit var bookmarkList: Array<BookmarkDTO>
+        lateinit var userName: String
+        var isLogined = false
 //        fun saveData(userId: String) {
 //            val pref = getSharedPreferences("userId", MODE_PRIVATE)
 //            val edit = pref.edit()
